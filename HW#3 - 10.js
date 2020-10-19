@@ -1,6 +1,8 @@
+// https://jsfiddle.net/njahnik/1vq9c05p/2/
+
 'use strict'
 
-Function.prototype.myBind = function(context, args) {
+Function.prototype.myBind = function(context) {
   var boundArgs = Array.prototype.slice.call(arguments, 1);
   var newFunction = this;
   

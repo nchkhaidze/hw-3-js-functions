@@ -1,7 +1,8 @@
+// https://jsfiddle.net/njahnik/o2sxuw9z/
+
 'use strict'
 
-function sum(digits) {
-  // turning arguments pseudo-array into normal array to use .slice
+function sum() {
 
   var numbers = Array.prototype.slice.call(arguments);
 

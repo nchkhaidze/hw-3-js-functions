@@ -1,30 +1,16 @@
+// https://jsfiddle.net/njahnik/ukLs8fpr/
+
 'use strict'
 
-// Functions accept arbitrary amount of arguments
+// Functions accept variable amount of arguments
 
-function largest(numbers) {
-  var max = arguments[0];
-
-  for (var i = 1; i < arguments.length; i++) {
-    if (arguments[i] > max) {
-      max = arguments[i];
-    }
-  }
-
-  return max;
+function largest() {
+  return Math.max.apply(null, arguments);
 }
 
-function smallest(numbers) {
-  var min = arguments[0];
-
-  for (var i = 1; i < arguments.length; i++) {
-    if (arguments[i] < min) {
-      min = arguments[i];
-    }
-  }
-
-  return min;
+function smallest() {
+  return Math.min.apply(null, arguments);
 }
 
-console.log(largest(2, -1));
+console.log(largest(2, -1, 100, 500, 50));
 console.log(smallest(2, 0.1));

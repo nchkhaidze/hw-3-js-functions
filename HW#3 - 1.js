@@ -1,12 +1,16 @@
+// https://jsfiddle.net/njahnik/0xp34wt8/
+
 'use strict'
 
 function splitAndMerge(str, sp) {
-  var newStr = str.split(' ')
-  .map(word => word.split(''))
-  .map(word => word.join(sp))
-  .join(' ');
+  var newStr = str.split(' ');
 
-  return newStr;
+  for (var i = 0; i < newStr.length; i++) {
+    newStr[i] = newStr[i].split('').join(sp);
+  }
+
+  return newStr.join(' ');
 }
 
-console.log(splitAndMerge('My name is John', ' '));
+console.log(splitAndMerge("Hello World!",","));
+

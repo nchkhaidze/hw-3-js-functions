@@ -1,12 +1,12 @@
+// https://jsfiddle.net/njahnik/naLk6xc1/
+
 'use strict'
 
 function reverse(str) {
   var newStr = str.split(' ');
 
   for (var i = 0; i < newStr.length; i++) {
-    var word = newStr[i].split('');
-    word = word.reverse().join('');
-    newStr[i] = word;
+    newStr[i] = newStr[i].split('').reverse().join('');
   }
 
   newStr = newStr.join(' ');
@@ -14,4 +14,4 @@ function reverse(str) {
   return newStr;
 }
 
-console.log(reverse('Улыбок тебе дед макар'));
+console.log(reverse('A fun little challenge!'));
